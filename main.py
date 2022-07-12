@@ -29,10 +29,11 @@ report = Score_player_0 + 'scored in the ' + str (goal_0) + 'nd minute\n' + Scor
 player = 'Jan Wouters'
 
 #2
-first_name = player.split()[0]
+find_space = player.find(" ")
+first_name = player [0:find_space]
 
 #3
-last_name = player.split()[1]
+last_name = player [(find_space+1):200]
 last_name_len = len (last_name)
 
 #4
@@ -42,11 +43,9 @@ name_short = first_letter + '. ' + last_name
 #5
 number_letters_first_name = len (first_name)
 chant0 = number_letters_first_name * (first_name + '! ')
-chant = chant0.strip ( )
+chant = chant0.strip (' ')
+
+print (chant)
 
 #6
-good_chant = chant == 'Jan! Jan! Jan!'
-
-
-
-
+good_chant = (chant != chant + ' ')
